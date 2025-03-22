@@ -12,7 +12,7 @@ namespace DatabasePopulator.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=CatalogDb;Trusted_Connection=True;");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=mydb;User Id=postgres;Password=admin;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
