@@ -12,7 +12,10 @@ namespace DatabasePopulator.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=mydb;User Id=postgres;Password=admin;");
+            optionsBuilder.UseMySql(
+                "server=localhost;database=mydb;user=rares;password=admin;",
+                new MySqlServerVersion(new Version(8, 0, 22))
+            );
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

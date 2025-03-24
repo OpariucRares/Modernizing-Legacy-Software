@@ -34,12 +34,12 @@ namespace DatabasePopulator
 
             var items = faker.Generate(count);
 
-            for (int i = 0; i < items.Count; i++)
-            {
-                var item = items[i];
-                var imagePath = System.IO.Path.Combine(imageFolderPath, $"Normal_Image_{i}.png");
-                File.Copy($"{imageFolderPath}\\Normal_Image.png", imagePath, true);
-            }
+            // for (int i = 0; i < items.Count; i++)
+            // {
+            //     var item = items[i];
+            //     var imagePath = System.IO.Path.Combine(imageFolderPath, $"Normal_Image_{i}.png");
+            //     File.Copy($"{imageFolderPath}\\Normal_Image.png", imagePath, true);
+            // }
 
             return items;
         }
